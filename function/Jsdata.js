@@ -1,26 +1,26 @@
-function operation1(){
-    document.getElementById("button1").style.backgroundColor="green"
+function display1() {
+    document.getElementById("id1").style.backgroundColor = "red"
 }
 
-function operation2(){
-    document.getElementById("button2").style.backgroundColor="yellow"
+function display2() {
+    document.getElementById("id2").style.backgroundColor = "yellow"
 }
 
-function operation3(){
-    document.getElementById("button3").style.backgroundColor="blue"
+function display3() {
+    document.getElementById("id3").style.backgroundColor = "blue"
 }
 
 
-function operation4(){
-    document.getElementById("button4").style.backgroundColor="red"
+function display4() {
+    document.getElementById("id4").style.backgroundColor = "red"
 }
 
-function operation5() {
-    document.getElementById('input1').style.backgroundColor='aqua'
-    
+function display5() {
+    document.getElementById('id5').style.backgroundColor = 'aqua'
+
 }
 
-function operation6() {
-    let name=document.getElementById('input2').value
-    console.log(name.touppercase);
+function display6() {
+    let data = document.getElementById('id6').value
+    document.getElementById('id6').value = data.toUppercase
 }
