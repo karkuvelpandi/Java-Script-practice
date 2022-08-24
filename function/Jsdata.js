@@ -22,5 +22,6 @@ function display5() {
 
 function display6() {
     let data = document.getElementById('id6').value
-    document.getElementById('id6').value = data.toUppercase
+    // console.log(data);
+    document.getElementById('id6').value = data.touppercase()
 }
