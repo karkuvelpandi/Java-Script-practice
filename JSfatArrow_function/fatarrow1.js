@@ -13,17 +13,18 @@ let greet1 = () => {
 greet1();
 
 
-let greet2=()=>{
+let greet2 = () => {
     return "Hi man"
 }
-let result=greet2();
+let result = greet2();
 console.log(result);
 
-let greet3=()=>{
+let greet3 = () => {
     return "Hi buddy"
 }
-console.log(greet3);
+console.log(greet3());
 
 //implicit code
 
-let greet4=()=>"Good nisght"
+let greet4 = () => "Good nisght"
+console.log(greet4());
