@@ -6,53 +6,120 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
+    <style>
+        .container {
+            background: gray;
+            width: 30%;
+            margin-top: 130px;
+            color: aliceblue;
+
+        }
+
+        body {
+            background: greenyellow;
+        }
+
+        .form-group {
+            padding: 5px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: black;
+            background: aquamarine;
+        }
+
+        .form-group.success input {
+            border-color: greenyellow;
+        }
+
+        .form-group.error input {
+            border-color: red;
+        }
+
+        .form-group i {
+            visibility: hidden;
+            position: absolute;
+            right: 20px;
+        }
+
+        .form-group.success i.tick {
+            visibility: visible;
+        }
+
+        .form-group.success i.cross {
+            color: red;
+            visibility: visible;
+        }
+
+        .form-group small {
+            color: orange;
+            position: absolute;
+            visibility: hidden;
+        }
+
+        .form-group.error small {
+            visibility: visible;
+        }
+
+        .form button {
+            background: aqua;
+            border-radius: 10px;
+            display: block;
+            width: 100%;
+            margin-top: 30px;
+            padding: 5px;
+        }
+    </style>
+
 </head>
 
 <body>
-    <form action="" onsubmit="return validation1()">
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col4">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="form-group">
-                                <input type="text" class='form-control' id="inputbox1" placeholder="Name" />
-                                <span id="span1" style="color: red;"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class='form-control' id="inputbox2" placeholder="Email" />
-                            <span id="span2" style="color: red;"></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" class='form-control' id="inputbox3" placeholder="Mobile no" />
-                            <span id="span3" style="color: red;"></span>
-                        </div>
-
-
-                    </div>
-                    <div class="card-body" style="background-color: black ;">
-                        <div>
-                            <input type="submit" value="Register" class="btn btn-success" />
-                        </div>
-
-                    </div>
-
-
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="head">
+                    <h1>Create New Account</h1>
                 </div>
+                <form class="form" id="form">
+                    <div class="form-group">
+                        <label for="">User name</label>
 
+                        <input type="text" class="form-control" placeholder="Enter name" id="username">
+                        <i class="tick">✔️</i>
+                        <i class="cross">❎</i>
+
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" class="form-control" placeholder="Enter email" id="email">
+                        <i class="tick">✔️</i>
+                        <i class="cross">❎</i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="password">
+                        <i class="tick">✔️</i>
+                        <i class="cross">❎</i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Conform Password</label>
+                        <input type="text" class="form-control" placeholder="Re-enter Password" id="password2">
+                        <i class="tick">✔️</i>
+                        <i class="cross">❎</i>
+                        <small>Error Message</small>
+                    </div>
+                    <button>Submit</button>
+
+
+                </form>
             </div>
-            <div class="col4"></div>
-            <div class="col4"></div>
-
-
         </div>
+    </div>
 
-
-
-
-        </div>
-    </form>
 </body>
 
 </html>
