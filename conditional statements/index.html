@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Conditional Format</title>
+</head>
+
+<body onclick="wish()">
+    <button id="button">Click Here to get greet</button>
+
+    <p id="content"></p>
+
+
+    <script>
+        let time = new Date();
+
+        let currentTime = time.getHours();
+
+        function wish() {
+
+            if (0 <= currentTime && currentTime < 10) {
+
+                console.log("Good Morning");
+            }
+            else if (currentTime <= 15 && currentTime >= 10) {
+
+                console.log("Good Afternoon");
+            }
+            else {
+
+                console.log("Good Night");
+            }
+            return
+        }
+        let r1 = result
+        console.log(result);
+        document.getElementById("content").innerText = result
+    </script>
+</body>
+
+</html>
