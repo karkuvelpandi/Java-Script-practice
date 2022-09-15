@@ -1,22 +1,20 @@
+let takeTask = (success, failure) => {
+    //insert data into database and get the result is boolean value
 
-let employee=[{id:101,name:"rahul",sal:12000},
-             {id:102,name:"raj",sal:13000}]
-
-
-let createEmployee=(emp)=>{
- 
-     empployee.push(emp)
-
-
-}
-let getEmployee=()=>{
-setTimeout(()=>{
-
-    
-},3000)
+    let flag = false;
+    if (flag == true) {
+        success("data inserted successfully")
+    }
+    else {
+        failure("not inserted")
+    }
 
 
 }
 
-createEmployee({id:103,name:"kamal",sal:14000})
-getEmployee()
+takeTask((msg) => {
+    console.log(msg);
+},
+    (err) => {
+        console.log(err);
+    });
