@@ -1,40 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <title>Conditional Format</title>
 </head>
 
-<body onclick="wish()">
-    <button id="button">Click Here to get greet</button>
+<body>
+    <button onclick='buttonHolder()'>Click Here to greet</button>
 
     <p id="content"></p>
 
-
     <script>
-        let time = new Date();
+        let time = new Date
+        let currentTime = time.getHours()
 
-        let currentTime = time.getHours();
-
-        function wish() {
+        let wish = () => {
 
             if (0 <= currentTime && currentTime < 10) {
 
                 console.log("Good Morning");
+                return ("Good Morning")
             }
             else if (currentTime <= 15 && currentTime >= 10) {
 
                 console.log("Good Afternoon");
+                return ("Good Afternoon")
             }
-            else {
+            else if (currentTime > 15 && currentTime <= 18) {
+
+                console.log("Good Evening");
+                return ("Good Evening")
+            }
+            else {~
 
                 console.log("Good Night");
+                return ("Good Night")
             }
-            return
+
+
+
         }
-        let r1 = result
-        console.log(result);
-        document.getElementById("content").innerText = result
+       let buttonHolder=()=>{
+            document.getElementById("content").innerHTML=wish();
+       }
+
+    
+
     </script>
 </body>
 
