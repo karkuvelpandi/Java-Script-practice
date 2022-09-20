@@ -111,7 +111,7 @@ console.log("hello");
           <td>${peo.first_name}</td>    
           <td>${peo.email}</td>
           <td>${peo.gender}</td>
-          <td>${peo.email.substr(peo.email.indexOf('@')+1)}</td>
+          <td>${peo.email.substr(peo.email.indexOf('@')+1, peo.email.length-1)}</td>
           <td>${peo.email.substr(0,peo.email.indexOf('@'))}</td>
         </tr>`
        }
