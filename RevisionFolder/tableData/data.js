@@ -103,17 +103,22 @@ let peoples =[{"id":1,"first_name":"karkuvel","email":"karkuvelpandi007@gmail.co
  function displayData(){
     
     let rows=""
+   
 console.log("hello");
        for(peo of peoples){
-       
+        let website=peo.email.substr(peo.email.indexOf('@')+1, peo.email.length-1)
         rows =rows+`<tr>
           <td>${peo.id}</td>
           <td>${peo.first_name}</td>    
           <td>${peo.email}</td>
           <td>${peo.gender}</td>
-          <td>${peo.email.substr(peo.email.indexOf('@')+1, peo.email.length-1)}</td>
+          <td >${website}</td>  
           <td>${peo.email.substr(0,peo.email.indexOf('@'))}</td>
         </tr>`
        }
+      
        document.getElementById('tbodyData').innerHTML=rows
 };
+
+
+    
