@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css'
+        integrity='sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N' crossorigin='anonymous'>
+    <style>
+        .container {
+            background-color: rgb(16, 137, 137);
+        }
+
+        .col-4 {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar expand-lg">
+        <a href="#" class="navbar-brand">Form Handling</a>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4">
+                <form class="from mt-2" onsubmit="return validate()">
+                    <label for="" claas="">
+                        <h3>Registration Form</h3>
+                    </label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" placeholder="Username" />
+                    </div>
+                    <p style="color: red ;" id="userMessage"></p>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" placeholder="Password" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="Eamil" />
+                    </div>
+                    <div class="form-group ml-3">
+                        <div class="row"><input type="radio" class="form-check" id="radio1" />Male
+                            <input type="radio" class="form-check" id="radio2" />Female
+                        </div>
+
+                    </div>
+                    <input type="submit" value="Submit" name="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function validate() {
+        let name = document.getElementById('username').value
+        if (name == "") {
+            document.getElementById('userMessage').innerHTML = "Please fill the Username"
+        }
+        else if(name.length<5){
+            document.getElementById('userMessage').innerHTML="please fill min 5 character"
+        }
+        return false
+    }
+</script>
+
+</html>
