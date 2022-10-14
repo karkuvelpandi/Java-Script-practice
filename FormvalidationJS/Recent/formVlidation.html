@@ -1,0 +1,33 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <input type="text" id="userid"><br><br>
+    <input type="password" id="password" oninput="myFunction()"><br><br>
+    <input type="button" disabled id="button" value="Login">
+</body>
+<script>
+    let userId = document.getElementById("userid")
+    let password = document.getElementById("password")
+    let button = document.getElementById("button")
+    
+    function myFunction() {
+        if (userId == "" && password == "") {
+            button.disabled = true;
+
+        }
+        else if (userId != "" && password == "") {
+            document.getElementById("button").disabled = true;
+
+        }
+        else if (userId != "" && password != "") {
+            document.getElementById("button").disabled = false;
+        }
+    }
+
+</script>
+
+</html>
