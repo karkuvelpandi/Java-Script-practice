@@ -1,7 +1,13 @@
+/* for (let i=1;i<=5;i++){
+    setTimeout(()=>{
+        console.log(i);
+    },i*2000)
+} */
 
-//set Interval is used for perform an activity n number of time with defined intervals
-//Example activity <time gap 5 seconds> activity <time gap 5 seconds> activity 
-
-setInterval(() => {
-    console.log("Good morning")
-}, 5000);
+let i=1;
+while(i<=5){
+    setTimeout(()=>{
+        console.log(i);
+    },i*2000)
+    
+}
