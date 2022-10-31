@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Form</title>
+        <script type></script>
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+        <form onsubmit="return validate()" id="forminput">
+            <label for="">First Name</label>
+            <input type="text" id="firstname"  /> <br />
+            <span id="message1" style="color: red;"> </span> <br />
+            <label for="">Last Name</label>
+            <input type="text" id="lastname"  /> <br />
+            <span id="message2" style="color: red;"> </span> <br />
+            <label for="">Email</label>
+            <input type="email" id="userEmail" /> <br />
+            <span id="emailMessage" style="color:red"></span><br />
+            <label for="">Mobile:</label>
+            <input type="number"  placeholder="Enter mobile no" id="mobile"><br>
+            <span id="message3" style="color:red"></span><br />
+            <textarea name="" id="" cols="30" rows="5" placeholder="Address(area and street)" maxlength="48"></textarea><br/><br/>
+            Address type <br/><br/>
+            <input type="radio" name="color">
+            <label > Home</label>
+            <input type="radio" name="color">
+            <label > Office</label><br/><br/>
+            <input type="submit"/>
+        </form>
+    </body>
+    <script>
+        let form=document.getElementById("forminput")
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault()
+            validate()
+        })
+        function validate() {
+
+            let firstname = document.getElementById("firstname").value;
+            let lastname = document.getElementById("lastname").value;
+            let mobile = document.getElementById("mobile").value;
+            let email = document.getElementById("userEmail").value;
+            if (firstname == "") {
+                document.getElementById("message1").innerHTML = `Please Enter Value`
+                
+                return false;
+            }
+            if (firstname.length < 3) {
+                document.getElementById("message1").innerHTML = "Min 3 Char"
+                return false;
+            }
+            if (lastname == "") {
+                document.getElementById("message2").innerHTML = `Please Enter Value`
+                
+                return false;
+            }
+            if (lastname.length < 3) {
+                document.getElementById("message2").innerHTML = "Min 3 Char"
+                return false;
+            }
+    
+            if (email == "") {
+                document.getElementById("emailMessage").innerHTML = "Please Enter Email";
+                return false
+            }
+            if (mobile == "") {
+                document.getElementById("message3").innerHTML=' Please Enter Mobile No'
+                return false
+            }
+              if(mobile.length < 10) {
+                document.getElementById("message3").innerHTML='Please fill Min 10 char'
+                return false
+            }
+            if( mobile.length>10){
+                document.getElementById("message3").innerHTML='Please fill max 10 char'
+                return false
+            }
+            if(firstname!="" && lastname!="" && email!="" &&mobile!=""){
+                console.log({
+                    "first:":firstname
+                })
+            }
+    
+        }
+        
+    </script>
+    </html>
