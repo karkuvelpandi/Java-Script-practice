@@ -5,8 +5,8 @@ function printName(){
 }
     printName()
 
-    function printName(){
-        console.log(my);
+function print(){
+        console.log(myName);
 
     }
-    prin()
+ prin()
