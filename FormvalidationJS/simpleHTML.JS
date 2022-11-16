@@ -4,7 +4,6 @@ let form=document.getElementById("forminput")
             validate()
         })
         function validate() {
-
             let firstname = document.getElementById("firstname").value;
             let lastname = document.getElementById("lastname").value;
             let mobile = document.getElementById("mobile").value;
