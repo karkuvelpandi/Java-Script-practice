@@ -9,7 +9,7 @@ let users={
     name:4656
 }
 users.name="karkuvel"
-users.loc="bangbang"
+users.loc="banglore"
 console.log(users);
 console.log(users.id);
 
