@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="data"></div>
+    <!-- <button onclick="wish()">click buddy</button> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      function wish() {
+        axios.get("https://dummyjson.com/carts").then((resp) => {
+          let result = resp.data.carts;
+          data = result;
+          addData(data);
+        });
+      }wish()
+      function addData(data) {
+        let datas = data;
+        console.log(datas);
+        let row="";
+        // for (let i = 0; i <=datas.length - 1; i++) {
+        //   row = row + `<h3>${datas[i].id}<h3>
+        //                 <h3>${datas[i].total}<h3>`;
+        // }
+        for(d of datas){
+            row=row+`<h1>${d.id}<h1>`
+        }
+        document.getElementById("data").innerHTML = row;
+      }
+    </script>
+  </body>
+</html>
