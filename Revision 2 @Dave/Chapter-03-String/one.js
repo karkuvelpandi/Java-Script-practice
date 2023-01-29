@@ -30,18 +30,43 @@ console.log("Every good boy doing fine". split(" "));//[ 'Every', 'good', 'boy',
 
 //map method testcase
 
-let arr=[1,2,3]
+let arr=[1,2,"hi",3]
+
+
+// arr.map((a)=>{
+//     console.log(a);
+//  }) 
+
+// console.log(arr.map((a)=>{
+//     a
+//   }));
+
+// console.log(arr.map((a)=>{
+//     return a 
+//   }));
+
+
+console.log(
+    arr.filter((a)=>{
+        return typeof a==="string"
+      // if(typeof a==="string"){
+  
+      //     return console.log(a)
+      // }
+    }) 
+);
 
 arr.map((a)=>{
-  console.log(a); 
-})
+        // return typeof a==="string"
+    if(typeof a==="string"){
+          return console.log(a)
+      }
+    }) 
 
-console.log(arr.map((a)=>{
-    a
-  }));
-
-console.log(arr.map((a)=>{
-    return a 
-  }));
-
-
+//arr.every(()=>{})  - Method
+// Checking every element inside a array is a similar data type or not strictly.
+let arr2=["hi",1]
+console.log( arr2.every((a)=>{
+    return typeof a==="string"
+}));
+ 
