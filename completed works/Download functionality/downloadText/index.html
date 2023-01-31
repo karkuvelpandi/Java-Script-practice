@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <main>
+        <textarea  id="textarea" cols="30" rows="10"></textarea>
+        <h2><button id="button">Download the text</button></h2>
+    </main>
+    <script>
+       const textval=document.getElementById('textarea').value
+       const button=document.getElementById('button')
+       const fileName="output.txt"
+       button.addEventListener("click",()=>{
+           download(textval,fileName)
+        })
+       let download=(textval,fileName)=>{
+            var element=document.createElement('a')
+            element.setAttribute('href','data:text/plain;charset=utf-8,'+encodeURIComponent(textval))
+            element.setAttribute('download',fileName)
+            element.style.display='none'
+            document.body.appendChild(element)
+            element.click()
+            element.body.removeChild(element)
+       }
+    </script>
+</body>
+</html>

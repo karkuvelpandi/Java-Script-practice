@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Download function</h1>
+   <!-- Anchor tag with download function  -->
+    <a href="./File folder/text.txt" download><button>click to Download</button></a>
+   <!-- Anchor tag with download function with custom name -->
+    <a href="./File folder/text.txt" download="customname.txt"><button>click to Download</button></a>
+    <h2></h2>
+    <!-- <script>
+      function download(url, filename) {
+        fetch(url)
+          .then((response) => response.blob())
+          .then((blob) => {
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = filename;
+            link.click();
+          })
+          .catch(console.error);
+      }
+
+      download("https://get.geojs.io/v1/ip/geo.json", "geoip.json");
+      download("data:text/html,HelloWorld!", "helloWorld.txt");
+    </script> -->
+  </body>
+</html>
