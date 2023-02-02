@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <title>ToDoList</title>
+  </head>
+  <body onload="iterate()">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header bg-info text-white">
+              <h1>ToDo List</h1>
+            </div>
+            <div class="card-body">
+              <form>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="display"
+                  placeholder="Enter your ToDo"
+                  required
+                />
+                <select name="" id="status" required>
+                     <!-- <option >Select Option</option> -->
+                     <option value="Pending">Pending</option>
+                     <option value="Completed">Completed</option>
+                </select>
+                <input
+                  type="submit"
+                  onclick="userToDo(event)"
+                  class="btn btn-info mt-4"
+                  value="Add ToDo"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <table class="table table-hover">
+            <thead class="bg-dark text-white">
+              <tr>
+                <th>ID</th>
+                <th>TASK</th>
+                <th>STATUS</th>
+                <th>MODIFY</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    let getData = () => {
+      let list = localStorage.getItem("task");
+      if (list) {
+        return JSON.parse(list);
+      } else {
+        return [];
+      }
+    };
+    let store = getData();
+    const userToDo = () => {
+      // event.preventDefault()
+      let display = document.getElementById("display").value;
+      let status=document.getElementById('status').value
+    let formValue={
+        todo:display,
+        status:status
+    }
+
+      let newStore = [...store, formValue];
+      localStorage.setItem("task", [JSON.stringify(newStore)]);
+    };
+
+    let editHandler = (element)=>{
+        let display = document.getElementById('display')
+        let status = document.getElementById('status')
+        console.log(element);
+        display.value = element.todo
+        status.value = element.status
+
+    }
+
+    let iterate = () => {
+      let row = "";
+      store.map((ele, index) => {
+        return (row = row +`<tr>
+                    <td>${index + 1}</td>
+                    <td>${ele.todo}</td>
+                    <td>${ele.status}</td>
+                    <td><button onclick=${editHandler.bind(this,ele)})>Edit</button><button>Delete</button></td>
+                </tr>`);
+      });
+      document.getElementById("tbody").innerHTML = row;
+    };
+  </script>
+</html>
