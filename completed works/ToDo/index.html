@@ -100,7 +100,7 @@
     let iterate = () => {
       let row = "";
       store.map((ele, index) => {
-        return (row = row +`<tr>
+        return (row = row +`<tr class="delete">
                     <td>${index + 1}</td>
                     <td>${ele.todo}</td>
                     <td>${ele.status}</td>
@@ -109,5 +109,11 @@
       });
       document.getElementById("tbody").innerHTML = row;
     };
+    // var current_tasks = document.querySelectorAll(".delete");
+    //     for(var i=0; i<current_tasks.length; i++){
+    //         current_tasks[i].onclick = function(){
+    //             this.parentNode.remove();
+    //         }
+    //       }
   </script>
 </html>
