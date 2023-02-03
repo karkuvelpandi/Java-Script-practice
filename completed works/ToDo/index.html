@@ -30,9 +30,9 @@
                   required
                 />
                 <select name="" id="status" required>
-                     <!-- <option >Select Option</option> -->
-                     <option value="Pending">Pending</option>
-                     <option value="Completed">Completed</option>
+                  <!-- <option >Select Option</option> -->
+                  <option value="Pending">Pending</option>
+                  <option value="Completed">Completed</option>
                 </select>
                 <input
                   type="submit"
@@ -56,10 +56,7 @@
                 <th>MODIFY</th>
               </tr>
             </thead>
-            <tbody id="tbody">
-              
-
-            </tbody>
+            <tbody id="tbody"></tbody>
           </table>
         </div>
       </div>
@@ -78,42 +75,53 @@
     const userToDo = () => {
       // event.preventDefault()
       let display = document.getElementById("display").value;
-      let status=document.getElementById('status').value
-    let formValue={
-        todo:display,
-        status:status
-    }
+      let status = document.getElementById("status").value;
+      id = 0;
+      let formValue = {
+        //  id:index,
+        todo: display,
+        status: status,
+      };
 
       let newStore = [...store, formValue];
       localStorage.setItem("task", [JSON.stringify(newStore)]);
     };
 
-    let editHandler = (element)=>{
-        let display = document.getElementById('display')
-        let status = document.getElementById('status')
-        console.log(element);
-        display.value = element.todo
-        status.value = element.status
-
-    }
-
     let iterate = () => {
       let row = "";
       store.map((ele, index) => {
-        return (row = row +`<tr class="delete">
+        return (row =
+          row +
+          `<tr>
                     <td>${index + 1}</td>
                     <td>${ele.todo}</td>
                     <td>${ele.status}</td>
-                    <td><button onclick=${editHandler.bind(this,ele)})>Edit</button><button>Delete</button></td>
+                    <td><button onclick='editTask(${
+                      (ele.todo, ele.status, index)
+                    })'>Edit</button><button onclick=deleteTask(${index})>Delete</button></td>
                 </tr>`);
       });
       document.getElementById("tbody").innerHTML = row;
     };
-    // var current_tasks = document.querySelectorAll(".delete");
-    //     for(var i=0; i<current_tasks.length; i++){
-    //         current_tasks[i].onclick = function(){
-    //             this.parentNode.remove();
-    //         }
-    //       }
+
+    let editTask = (a, b, c) => {
+      let display = document.getElementById("display");
+      let status = document.getElementById("status");
+      console.log(a, b, c);
+    };
+    let deleteTask=(taskID) =>{
+      console.log(taskID);
+      let task = localStorage.getItem("task");
+      console.log(task);
+      let filteredStore = task.filter((elem, index) => index !== taskID);
+      localStorage.setItem("task", [JSON.stringify(filteredStore)]);
+      //  const index=task.findIndex((singleTask,index)=>{
+      //   index===taskID
+      // })
+      //  if(index>-1){
+      //     let newStore= task.splice(index,1)
+      //     localStorage.setItem("task", [JSON.stringify(newStore)]);
+      //  }
+    }
   </script>
 </html>
