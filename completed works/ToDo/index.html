@@ -113,15 +113,16 @@
       console.log(taskID);
       let task = localStorage.getItem("task");
       console.log(task);
+     
+      var tableRows = document.querySelectorAll("tr");
+      console.log(tableRows);
+      
       let filteredStore = task.filter((elem, index) => index !== taskID);
       localStorage.setItem("task", [JSON.stringify(filteredStore)]);
-      //  const index=task.findIndex((singleTask,index)=>{
-      //   index===taskID
-      // })
-      //  if(index>-1){
-      //     let newStore= task.splice(index,1)
-      //     localStorage.setItem("task", [JSON.stringify(newStore)]);
-      //  }
+
+
+
+    
     }
   </script>
 </html>
