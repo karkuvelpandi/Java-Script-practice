@@ -25,15 +25,15 @@ console.log(Number.isInteger(myFloat)); //false
 returns a floating point number. If a number cannot be
 parsed from the argument, it returns NaN. */
 // parseFloat always give output of number only
-console.log(typeof Number.parseFloat(4)); //number 4
-console.log(typeof Number.parseFloat("4")); //number 4
-console.log(typeof Number.parseFloat("5jk")); //number 5
+console.log( Number.parseFloat(4.56)); //number 4.56
+console.log( Number.parseFloat("4.5")); //number 4.5
+console.log( Number.parseFloat("5jk.85")); //number 5
 
  /* The toFixed() method formats a number according to how
 many decimal points you provide as the parameter. */
 
-console.log( Number.parseFloat(45.2222).toFixed(2)); //number 45.22
-console.log(typeof Number.parseFloat(45.2222).toFixed(2)); //number 
+console.log( Number.parseFloat(45.2232).toFixed(3)); //number 45.223
+console.log(typeof Number.parseFloat(45.2222).toFixed(2)); //number //after used toFixed its changing datatype to string
 //while using toFixed method it always return string as a output
 
  /* The Number. parselnt() method parses a string argument and
@@ -59,10 +59,17 @@ console.log(Number("test"));  //NaN
 //isNaN method
 /* The Number.isNaN() method determines whether the passed
 value is NaN AND its type is Number. */
-console.log(Number.isNaN(8)); //false //for every datatype it will returns false only
-
+console.log(Number.isNaN("5")); //false //for every datatype it will returns false only
+console.log(Number(isNaN("5"))); //false //for every datatype it will returns false only
+console.log(Number(isNaN("jk"))); //false //for every datatype it will returns false only
+console.log(Number(true));
 //we can use global isNaN METHOD to check whether is NaN or not
 console.log(isNaN("test"));  //true
 console.log(isNaN(0));  //false
 
+console.log(4+"5");
+console.log(4-"5");
+console.log(4*"4");
+console.log("4"*"4");
+console.log("4"*"pk");
 

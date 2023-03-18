@@ -69,4 +69,5 @@ let arr2=["hi",1]
 console.log( arr2.every((a)=>{
     return typeof a==="string"
 }));
- 
+
+

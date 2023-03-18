@@ -35,7 +35,7 @@ createEmployee({ id: 103, name: "kamal", sal: 14000 })
 
      .then((msg) => {              //Representing success
           console.log(msg);
-          getEmployee();           //when the timeof exicuting only i need to call getEmployee function.
+          getEmployee();           //when the time of exicuting only i need to call getEmployee function.
      }) 
      .catch((err) => { console.log(err); })  // Representing failure
 

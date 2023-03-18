@@ -9,4 +9,4 @@ function print(){
         console.log(myName);
 
     }
- prin()
+ print()

@@ -8,7 +8,7 @@ console.log(Math.trunc(Math.PI)); //3
 //Math.round() will round the value and give as a number datatype only
 console.log( Math.round(3.14)); // number 3
 console.log( Math.round("3.14")); // number 3
-console.log( Math.round("3.54")); // number 4
+console.log( Math.round("3.50")); // number 4
 console.log( Math.round("pk")); // NaN
 console.log( Math.round(undefined)); // NaN
 console.log( Math.round(null)); // 0

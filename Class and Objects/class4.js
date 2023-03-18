@@ -1,7 +1,7 @@
 class Employee {
     eId;
     eName;
-    setEid(id) { }
+    setEid(id) {this.eId=id }
     getEid(id) { }
 }
 
@@ -10,4 +10,4 @@ a1.setEid(101);
 a1.getEid();
 
 console.log(a1);
-new Employee()
+// new Employee()

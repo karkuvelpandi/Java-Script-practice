@@ -8,4 +8,4 @@ function outerFuncation(outerVariable){
     }
 }
 let newFunction=outerFuncation("outer")
-         newFunction("inner")
+newFunction("inner")
