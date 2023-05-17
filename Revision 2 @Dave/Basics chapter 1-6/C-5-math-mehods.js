@@ -22,3 +22,12 @@ console.log( Math.ceil("3.14")); // number 4
 console.log( Math.floor("3.8")); // number 3
 
 
+// Math.random() - property always return from 0-1
+console.log(Math.random());
+console.log(Math.random());
+
+// From 1- 10
+console.log(Math.floor(Math.random()*10)); // this will give us only 0-9
+// Math.ceil() method and Math.random() have a chance of return 0 instead of given range
+// so we can use Math.floor() method with 1 added with Math.random() is a full proof for randomizing number between a defined limits
+console.log(Math.floor(Math.random()*10)+1);
