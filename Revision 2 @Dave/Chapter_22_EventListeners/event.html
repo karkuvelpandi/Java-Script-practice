@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar {
+            height: 100px;
+            background-color: burlywood;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%
+        }
+
+        .view1 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-direction: row;
+            gap: 10px;
+            padding: 30px;
+            background-color: cadetblue;
+        }
+
+        .elements {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+            border: 2px solid blue;
+            border-radius: 4px;
+            background-color: aliceblue;
+        }
+
+        .view2 {
+            height: 100vh;
+            width: 100%;
+            background-color: blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .view2Inner1 {
+            background-color: aquamarine;
+            width: 200px;
+            padding: 15px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .purple {
+            background-color: purple;
+        }
+
+        .darkBlue {
+            background-color: blue;
+        }
+
+        .heightChange {
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar" class="navbar">
+        <h1> My Navbar</h1>
+        <p>Test text</p>
+    </nav>
+    <main id="container" class="container">
+        <section id="view1" class="view1">
+            <div class="elements">1</div>
+            <div class="elements">2</div>
+            <div class="elements">3</div>
+            <div class="elements">4</div>
+            <div class="elements">5</div>
+            <div class="elements">6</div>
+            <div class="elements">7</div>
+            <div class="elements">8</div>
+            <div class="elements">9</div>
+            <div class="elements">10</div>
+            <div class="elements">11</div>
+            <div class="elements">12</div>
+        </section>
+        <section id="view2" class="view2">
+
+            <div id="view2Inner1" class="view2Inner1">
+                <h1 id="view2Inner2" class="view2Inner2">
+                    Karkuvel
+                </h1>
+            </div>
+        </section>
+        <section id="parent"
+            style="background-color: aquamarine;width: 100%;height: 250px;display: grid;place-content: center; ">
+            <p id="child" style="padding: 15px;background-color: orange;">Demo useCapture</p>
+        </section>
+        <section id="classList" class="darkBlue" style="height: 100px; width: 100%;">
+            Adding classList
+
+        </section>
+        <section class="view3" id="view3">
+            <form action="" id="myForm">
+                <input type="text">
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <script src="./event.js"></script>
+</body>
+
+</html>
