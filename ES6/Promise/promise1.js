@@ -1,20 +1,19 @@
 let takeTask = (success, failure) => {
-    //insert data into database and get the result is boolean value
+  //insert data into database and get the result is boolean value
 
-    let flag = false;
-    if (flag == true) {
-        success("data inserted successfully")
-    }
-    else {
-        failure("not inserted")
-    }
+  let flag = false;
+  if (flag == true) {
+    success("data inserted successfully");
+  } else {
+    failure("not inserted");
+  }
+};
 
-
-}
-
-takeTask((msg) => {
+takeTask(
+  (msg) => {
     console.log(msg);
-},
-    (err) => {
-        console.log(err);
-    });
+  },
+  (err) => {
+    console.log(err);
+  }
+);
